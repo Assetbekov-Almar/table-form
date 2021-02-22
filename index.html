@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
+	<title>Table</title>
+</head>
+<body>
+<form action="" id="test-form">
+	<div class="test-form-data  border border-primary rounded">
+		<div class="checkboxes">
+			<div class="form-check form-check-inline">
+				<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="1" name='one'>
+				<label class="form-check-label" for="inlineCheckbox1">1</label>
+			</div>
+			<div class="form-check form-check-inline">
+				<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="2" name='two'>
+				<label class="form-check-label" for="inlineCheckbox2">2</label>
+			</div>
+			<div class="form-check form-check-inline">
+				<input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="3" name='three'>
+				<label class="form-check-label" for="inlineCheckbox3">3</label>
+			</div>
+		</div>
+
+		<select class="form-control" id="test-form-state">
+			<option value="" class="" selected disabled>Choose...</option>
+			<option value="SUCCESS" class="action-modal-SUCCESS">SUCCESS</option>
+			<option value="REJECTED" class="action-modal-REJECTED">REJECTED</option>
+			<option value="IN_PROCESS" class="action-modal-IN_PROCESS">IN_PROCESS</option>
+		</select>
+	
+		<div class="submit-form-section">
+			<input class="btn btn-primary btn-lg submit-btn" type="submit" value="Submit">
+		</div>
+	</div>
+</form>
+
+<div class="d-none modal-section action-modal-SUCCESS">
+	<div class="modal data-and-state-modal fade" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h6 class="modal-title">Проверьте правильность выбранных полей.</h6>
+					<button type="button" class="close" data-dismiss="modal">
+						<span>&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form action="file_1.php" class="data-and-state-form" method="POST">
+						<ul class="data-list">
+
+						</ul>
+						<div class="data-ids">
+
+						</div>
+						<div class="additional-data">
+							<input class="form-control" type="text" placeholder="SUCCESS" disabled>
+							<input type="text" name="text" class="form-control additional-input">
+							<select class="form-control additional-input" name="numbers">
+								<option value="" class="" selected disabled>Choose...</option>
+								<option name="1" value="1" class="action-modal-SUCCESS">1</option>
+								<option name="2" value="2" class="action-modal-REJECTED">2</option>
+							</select>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="d-none modal-section action-modal-REJECTED">
+	<div class="modal data-and-state-modal fade" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h6 class="modal-title">Проверьте правильность выбранных полей.</h6>
+					<button type="button" class="close" data-dismiss="modal">
+						<span>&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form action="file_1.php" class="data-and-state-form" method="POST">
+						<ul class="data-list">
+						
+						</ul>
+						<div class="data-ids">
+
+						</div>
+						<div class="additional-data">
+							<input class="form-control" type="text" placeholder="REJECTED" disabled>
+							<input type="text" name="text" class="form-control additional-input">
+							<select class="form-control additional-input">
+								<option value="" class="" name="numbers" selected disabled>Choose...</option>
+								<option name="1" value="1" class="action-modal-SUCCESS">1</option>
+								<option name="2" value="2" class="action-modal-REJECTED">2</option>
+							</select>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>	
+	</div>
+</div>
+
+<div class="d-none modal-section action-modal-IN_PROCESS">
+	<div class="modal data-and-state-modal fade" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h6 class="modal-title">Проверьте правильность выбранных полей</h6>
+					<button type="button" class="close" data-dismiss="modal">
+						<span>&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form action="file_1.php" class="data-and-state-form" method="POST">
+						<ul class="data-list">
+	
+						</ul>
+						<div class="data-ids">
+
+						</div>
+						<div class="additional-data">
+							<input class="form-control" type="text" name="text" placeholder="IN_PROCESS" disabled>
+							<input type="text" class="form-control additional-input">
+							<select class="form-control additional-input" name="numbers">
+								<option value="" class="" selected disabled>Choose...</option>
+								<option name="1" value="1" class="action-modal-SUCCESS">1</option>
+								<option name="2" value="2" class="action-modal-REJECTED">2</option>
+							</select>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="script.js"></script>
+</html>

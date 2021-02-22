@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
+*,*:before,*:after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+}
+
+body {
+	font-size: 16px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+#test-form {
+	width: 500px;
+	margin: 70px auto;	
+}
+
+.test-form-data {
+	display: flex;
+	flex-direction: column;
+	row-gap: 20px;
+	align-items: center;
+	padding: 20px 100px;
+}
+
+.modal-body {
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+	row-gap: 10px;
+}
+
+.modal-section .additional-data {
+	display: flex;
+	flex-direction: column;
+	row-gap: 5px;
+}
